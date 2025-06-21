@@ -22,37 +22,7 @@ A simple full-stack **Task Manager** web application built using:
 
 ---
 
-## 📁 Project Structure
 
-```
-/task-manager/
-├── /api/                   # Backend PHP APIs
-│   ├── create_task.php
-│   ├── get_tasks.php
-│   ├── update_task.php
-│   └── delete_task.php
-├── /assets/                # JS and CSS files
-│   ├── script.js
-│   └── style.css
-├── index.php               # Main frontend UI
-└── database.sql            # MySQL schema
-```
-
----
-
-## 🧱 Database Schema
-
-Use the following SQL to create the `tasks` table:
-
-```sql
-CREATE TABLE `tasks` (
-  `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `title` VARCHAR(255) NOT NULL,
-  `description` TEXT,
-  `status` ENUM('pending','completed') DEFAULT 'pending',
-  `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-```
 
 ---
 
@@ -60,7 +30,7 @@ CREATE TABLE `tasks` (
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/task-manager.git
+git clone https://github.com/Moha1234567890/Task-Manager
 cd task-manager
 ```
 
@@ -68,7 +38,7 @@ cd task-manager
 
 - Create a new database (e.g. `task_manager`)
 - Import `database.sql` into your database
-- Update DB credentials in `/api/db.php`:
+- Update DB credentials in `/config/db.php`:
 
 ```php
 $pdo = new PDO("mysql:host=localhost;dbname=task_manager;charset=utf8", "root", "");
@@ -97,11 +67,6 @@ If using XAMPP or similar:
 
 ---
 
-## 📸 Screenshots
-
-_Add some screenshots here if you want visual reference._
-
----
 
 ## 📄 License
 
@@ -111,5 +76,5 @@ MIT License. Feel free to use or modify.
 
 ## 🙋‍♂️ Author
 
-**Your Name**  
-[GitHub Profile](https://github.com/your-username)
+**Mohamed Hassan**  
+[GitHub Profile](https://github.com/Moha1234567890)
