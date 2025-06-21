@@ -1,6 +1,8 @@
 <?php
 require '../config/db.php';
 
+
+///getting updated data from form
 $id = $_POST['id'] ?? 0;
 $title = $_POST['title'] ?? '';
 $description = $_POST['description'] ?? '';
@@ -11,6 +13,8 @@ if (!$id || trim($title) === '') {
     exit;
 }
 
+
+//updating data and sending it to jq ajax
 $stmt = $pdo->prepare("UPDATE tasks SET title = ?, description = ?, status = ? WHERE id = ?");
 $stmt->execute([$title, $description, $status, $id]);
 

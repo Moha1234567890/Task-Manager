@@ -1,6 +1,8 @@
 <?php
 require '../config/db.php';
 
+
+//getting data from post request
 $title = $_POST['title'] ?? '';
 $description = $_POST['description'] ?? '';
 
@@ -9,6 +11,7 @@ if (trim($title) === '' OR strlen($title) > 50) {
     exit;
 }
 
+//inserting data into db
 $stmt = $pdo->prepare("INSERT INTO tasks (title, description) VALUES (?, ?)");
 $stmt->execute([$title, $description]);
 
